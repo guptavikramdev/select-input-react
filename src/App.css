@@ -58,6 +58,7 @@ body {
   visibility: hidden;
   opacity: 0;
   transition: 0.4s ease;
+  z-index: 10;
 }
 .select_box_list.active {
   scale: 1;
