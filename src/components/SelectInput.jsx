@@ -23,11 +23,16 @@ const SelectInput = ({
   });
   const handleSearch = (e) => {
     setSearchText(e.target.value);
-    const searchResult = option.filter((item) =>
-      item[objeref.current[1]]
-        .toLowerCase()
-        .includes(e.target.value.toLowerCase())
-    );
+    console.log(e.target.value);
+    const searchResult = option.filter((item) => {
+      if (typeof item == "object") {
+        return item[objeref.current[1]]
+          .toLowerCase()
+          .includes(e.target.value.toLowerCase());
+      } else {
+        return `${item}`.toLowerCase().includes(e.target.value.toLowerCase());
+      }
+    });
     setFilterOptions(searchResult);
   };
   const handleClick = () => {

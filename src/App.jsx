@@ -26,7 +26,7 @@ function App() {
         selectedItem={selectedCountry}
         onChange={(data) => setSelectedCountry(data)}
       />
-      
+
       <SelectInput
         option={getYearRange(2024, 2024 - 10, -1)}
         placeholder="Select Year"
