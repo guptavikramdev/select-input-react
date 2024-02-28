@@ -20,19 +20,21 @@ function App() {
     );
   return (
     <div className="container">
-      <SelectInput
-        option={country || []}
-        placeholder="Select Country"
-        selectedItem={selectedCountry}
-        onChange={(data) => setSelectedCountry(data)}
-      />
+      <div className="box">
+        <SelectInput
+          option={country || []}
+          placeholder="Select Country"
+          selectedItem={selectedCountry}
+          onChange={(data) => setSelectedCountry(data)}
+        />
 
-      <SelectInput
-        option={getYearRange(2024, 2024 - 10, -1)}
-        placeholder="Select Year"
-        selectedItem={selectedYear}
-        onChange={(data) => setSelectedYear(data)}
-      />
+        <SelectInput
+          option={getYearRange(2024, 2024 - 10, -1)}
+          placeholder="Select Year"
+          selectedItem={selectedYear}
+          onChange={(data) => setSelectedYear(data)}
+        />
+      </div>
     </div>
   );
 }
